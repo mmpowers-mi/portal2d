@@ -20,16 +20,15 @@ public class PlayerController : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 
 		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
 		Vector2 movement = new Vector2 (moveHorizontal * speed, rb2d.velocity.y);
 		rb2d.velocity = movement;
 	}
 
 	void Update()
 	{
-		if (grounded && Input.GetKeyDown(KeyCode.W))
-		{
-			GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
-		}
+        if (grounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
+        {
+            GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
+        }
 	}
 }
