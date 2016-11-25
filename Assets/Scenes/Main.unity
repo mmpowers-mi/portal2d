@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692534, g: 0.4967872, b: 0.57508564, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -342,7 +342,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967039
   jumpHeight: {x: 0, y: 5}
-  speed: 5
+  maxSpeed: 4
+  deceleration: 0.5
+  acceleration: 0.5
+  airAccelMod: 0.5
 --- !u!61 &58272429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1541,7 +1544,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 788435058}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 95176bf4297ba6a4883837598f85055b, type: 2}
+  m_Material: {fileID: 6200000, guid: 2584707c2e74e2c47aab63c9393bdf33, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1691,7 +1694,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 966876626}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 95176bf4297ba6a4883837598f85055b, type: 2}
+  m_Material: {fileID: 6200000, guid: 2584707c2e74e2c47aab63c9393bdf33, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2602,7 +2605,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1621350289}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 95176bf4297ba6a4883837598f85055b, type: 2}
+  m_Material: {fileID: 6200000, guid: 2584707c2e74e2c47aab63c9393bdf33, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2738,11 +2741,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011784691092, guid: a9faa7a710209454393cc19ff57fc730, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011784691092, guid: a9faa7a710209454393cc19ff57fc730, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011784691092, guid: a9faa7a710209454393cc19ff57fc730, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3111,7 +3114,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011784691092, guid: a9faa7a710209454393cc19ff57fc730, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000011784691092, guid: a9faa7a710209454393cc19ff57fc730, type: 2}
       propertyPath: m_LocalPosition.y
