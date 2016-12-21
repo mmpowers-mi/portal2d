@@ -29,17 +29,17 @@ public class PlayerController : MonoBehaviour {
 	public float acceleration = .5f;
 	public float airAccelMod = .8f;
 
-	void Start () {
+	void Start()
+    {
 		rb2d = GetComponent<Rigidbody2D> ();
 		rb2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 		Physics2D.IgnoreLayerCollision(8, 9, true);
 		//portalOrangeObj = GameObject.FindGameObjectWithTag("PortalOrange");
 		//portalBlueObj = GameObject.FindGameObjectWithTag("PortalBlue");
-
 	}
 
-	void FixedUpdate () {
-
+	void FixedUpdate()
+    {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		touchingPortalBlue = Physics2D.OverlapCircle (portalCheck.position, portalRadius, portalBlue);
 		touchingPortalOrange = Physics2D.OverlapCircle (portalCheck.position, portalRadius, portalOrange);
@@ -85,9 +85,7 @@ public class PlayerController : MonoBehaviour {
 			this.transform.position = tempPosition;
 		}
 
-
-
-		//NOTE: KeyCode needs to be replaced with input manager in later version.
+		// NOTE: KeyCode needs to be replaced with input manager in later version.
 
 		float velocity = rb2d.velocity.x;
 
@@ -110,7 +108,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		if (Mathf.Abs (velocity) > maxSpeed) {
-			//Ternary operator: Google it.
+			// Ternary operator: Google it.
 			velocity = velocity > 0 ? maxSpeed : -maxSpeed;
 		}
 
@@ -134,7 +132,6 @@ public class PlayerController : MonoBehaviour {
 				tempVelocity.x = tempVelocity.x * -1;
 			}
 		}
-			
 	}
 
 	void Update()
